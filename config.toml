@@ -3,3 +3,5 @@ languageCode = "en-us"
 title = "Alejandra"
 theme = "alejandra-chevey"
 disableKinds = ["RSS", "sitemap"]
+
+[taxonomies]
