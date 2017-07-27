@@ -1,0 +1,8 @@
+{
+  "generator-toolbox": {
+    "promptValues": {
+      "src": "themes/alejandra-chevey/assets/",
+      "dest": "./static/"
+    }
+  }
+}

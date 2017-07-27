@@ -1,0 +1,30 @@
+{
+  "src": "themes/alejandra-chevey/assets/",
+  "dest": "themes/alejandra-chevey/static/",
+  "ghpages": "./ghpages/",
+  "images": [
+    "themes/alejandra-chevey/static/images/**/*"
+  ],
+  "svg": [
+    "themes/alejandra-chevey/static/svg/**/*"
+  ],
+  "icons": [
+    "themes/alejandra-chevey/static/icons/**/*"
+  ],
+  "iconsFontName": "icon",
+  "fonts": [
+    "themes/alejandra-chevey/static/fonts/**/*"
+  ],
+  "vendors": {
+    "css": [],
+    "js": [
+      "node_modules/bootstrap/js/dist/alert.js",
+      "node_modules/bootstrap/js/dist/button.js",
+      "node_modules/bootstrap/js/dist/util.js"
+    ]
+  },
+  "singles": [{
+    "src": "",
+    "dest": ""
+  }]
+}

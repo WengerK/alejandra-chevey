@@ -1,0 +1,22 @@
+footer
+
+<script
+  src="http://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="{{ "js/vendors.min.js" }}"></script>
+
+<!-- Google Analytics -->
+{{ if .Site.Params.gcse }}
+<script>
+  (function() {
+    var cx = '{{ .Site.Params.gcse }}';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+{{ end }}
