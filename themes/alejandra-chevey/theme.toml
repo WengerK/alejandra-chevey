@@ -4,10 +4,10 @@
 name = "Alejandra Chevey"
 license = "MIT"
 licenselink = "https://https://github.com/WengerK/alejandra-chevey/blob/master/LICENSE.md"
-description = ""
+description = "A hugo theme using Toolbox for Alejandra Chevey website."
 homepage = "https://alejandra-chevey.com/"
-tags = []
-features = []
+tags = ["personal"]
+features = ["personal"]
 min_version = "0.25.1"
 
 [author]
