@@ -86,4 +86,7 @@ We use Capistrano to deploy:
 
 Solution hosted at [Webfaction](https://www.webfaction.com) & DNS at [Gandi](https://www.gandi.net).
 
+### SSL & Let's Encrypte
+
+Managed throught [ACME for Webfaction](https://github.com/gregplaysguitar/acme-webfaction).
 
