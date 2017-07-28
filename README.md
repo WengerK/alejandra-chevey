@@ -82,5 +82,8 @@ We use Capistrano to deploy:
   bundle exec cap staging deploy
   ```
 
+## 🌐 Hosting & DNS
+
+Solution hosted at [Webfaction](https://www.webfaction.com) & DNS at [Gandi](https://www.gandi.net).
 
 
