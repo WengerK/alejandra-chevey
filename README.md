@@ -10,37 +10,37 @@ staging status: [ ![Codeship Status for WengerK/alejandra-chevey](https://app.co
 
 First of all, you need to have the following tools installed globally on your environment:
 
-  * hugo
-  * npm
-  * yarn
+* hugo
+* npm
+* yarn
 
 ## 🚛 Install
 
 1. Setup your virtualhost (like `http://alejandra-chevey.dev`) to serve `/public`.
 
-2. Install Hugo and dependencies using brew
+1. Install Hugo and dependencies using brew
 
-  ```bash
-  $ brew install hugo
-  ```
+    ```bash
+    brew install hugo
+    ```
 
-2. Install Toolbox and dependencies using yarn
+1. Install Toolbox and dependencies using yarn
 
-  ```bash
-  $ yarn install
-  ```
+    ```bash
+    yarn install
+    ```
 
-3. Build the website
+1. Build the website
 
-  ```bash
-  $ hugo server -D
-  ```
+    ```bash
+    hugo server -D
+    ```
 
 ## After a git pull/merge
 
   ```bash
-  $ yarn build
-  $ hugo server
+  yarn build
+  hugo server
   ```
 
 ## 🎨 Build the theme
@@ -48,18 +48,18 @@ First of all, you need to have the following tools installed globally on your en
 The main styleguide of **Alejandra Chevey** is inside this project under `themes/alejandra-chevey/assets/`.
 The styleguide is then processed using [Toolbox](https://frontend.github.io/toolbox/).
 
-You first need to setup the work environment by running `$ yarn install`.
+You first need to setup the work environment by running `yarn install`.
 
 You can generate the styleguide and watch it:
 
   ```bash
-  $ yarn start
+  yarn start
   ```
 
 You can generate only the built assets for production by running:
 
   ```bash
-  $ yarn build
+  yarn build
   ```
 
 For more help about Toolbox, the [official documentation](http://frontend.github.io/toolbox/toolbox/#build-the-styleguide) is your best friend.
@@ -70,7 +70,7 @@ For more help about Toolbox, the [official documentation](http://frontend.github
 
   ```bash
   # You need to have ruby & bundler installed
-  $ bundle install
+  bundle install
   ```
 
 ### Each times
@@ -78,8 +78,8 @@ For more help about Toolbox, the [official documentation](http://frontend.github
 We use Capistrano to deploy:
 
   ```bash
-  $ bundle exec cap -T
-  $ bundle exec cap staging deploy
+  bundle exec cap -T
+  bundle exec cap staging deploy
   ```
 
 
