@@ -76,6 +76,7 @@
   "dependencies": {
     "barba.js": "^1.0.0",
     "bootstrap": "4.0.0-alpha.6",
-    "toolbox-utils": "^1.0.7"
+    "toolbox-utils": "^1.0.7",
+    "waypoints": "^4.0.1"
   }
 }
