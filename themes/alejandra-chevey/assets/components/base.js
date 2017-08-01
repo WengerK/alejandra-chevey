@@ -13,6 +13,9 @@ function init() {
   Waypoints();
 }
 
+/**
+ * Reset Waypoints after every Page transition of BarbarJS.
+ */
 Barba.Dispatcher.on('transitionCompleted', function(
   currentStatus,
   oldStatus,
