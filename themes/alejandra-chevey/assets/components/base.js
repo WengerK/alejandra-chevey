@@ -13,7 +13,11 @@ function init() {
   Waypoints();
 }
 
-Barba.Dispatcher.on('transitionCompleted', function (currentStatus, oldStatus, container) {
+Barba.Dispatcher.on('transitionCompleted', function(
+  currentStatus,
+  oldStatus,
+  container
+) {
   init();
 });
 
