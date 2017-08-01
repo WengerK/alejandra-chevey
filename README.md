@@ -18,6 +18,8 @@ First of all, you need to have the following tools installed globally on your en
 
 1. Setup your virtualhost (like `http://alejandra-chevey.dev`) to serve `/public`.
 
+    You must use the domaine `alejandra-chevey.dev`, localy, if you want to use the `Typekit` kit of fonts.
+
 1. Install Hugo and dependencies using brew
 
     ```bash
