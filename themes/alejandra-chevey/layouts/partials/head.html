@@ -33,10 +33,14 @@
   <meta property="og:url" content="{{ .URL | absLangURL }}" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
-<!-- Hugo Version number -->
+  <!-- Hugo Version number -->
   {{ .Hugo.Generator -}}
-<!-- Links and stylesheets -->
+
+  <!-- Links and stylesheets -->
   <link rel="canonical" href="{{ .URL | absLangURL }}" />
   <link rel="stylesheet" href="{{ "/css/base.css" }}" />
   <link rel="stylesheet" href="{{ "/css/base.css.map" }}" />
+
+  <!-- Fontawesome -->
+  <script src="https://use.fontawesome.com/7560378bd0.js"></script>
 </head>
