@@ -1,1 +1,43 @@
 @charset 'utf-8';
+
+$black: #000;
+
+$grid-gutter-width-base: 20px !default;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+) !default;
+
+$font-family-sans-serif: "halyard-text", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      "halyard-text", Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  "halyard-text", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+// $font-size-lg:   1.25rem !default;
+// $font-size-sm:   .875rem !default;
+// $font-size-xs:   .75rem !default;
+
+$font-weight-base: 700 !default;
+$line-height-base: 1.2 !default;
+
+// $font-size-h1: 2.5rem !default;
+// $font-size-h2: 2rem !default;
+// $font-size-h3: 1.75rem !default;
+// $font-size-h4: 1.5rem !default;
+// $font-size-h5: 1.25rem !default;
+// $font-size-h6: 1rem !default;
+
+$headings-line-height: $line-height-base;
+
+$display4-size: 0.5rem;
+
+$display1-weight: $font-weight-base;
+$display2-weight: $font-weight-base;
+$display3-weight: $font-weight-base;
+$display4-weight: $font-weight-base;
+
+$body-color: $black;
+$link-color: $body-color;
