@@ -27,6 +27,7 @@ const BarbaJS = () => {
    */
   document.addEventListener('DOMContentLoaded', function() {
     Barba.Pjax.start();
+    Barba.Prefetch.init();
 
     const FadeTransition = Barba.BaseTransition.extend({
       start: function() {
