@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ .Lang }}">
-  {{ partial "head.html" . }}
-  <body>
-    {{ partial "nav.html" . }}
-    {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
-    TERMS
-    {{ block "main" . }}{{ end }}
-    {{ partial "footer.html" . }}
-  </body>
-</html>
+{{ define "main" }}
+<main class="main">
+  TERMS
+  {{ .Content }}
+</main>
+{{ end }}

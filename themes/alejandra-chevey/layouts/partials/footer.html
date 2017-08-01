@@ -1,25 +1,30 @@
-<a class="d-block text-right px-md-0 hidden-md-up" href="mailto:">contact</a>
+<a class="d-block text-right px-md-0 hidden-md-up no-barba" href="mailto:">contact</a>
 
 <ul class="nav flex-row justify-content-end w-100 hidden-md-up">
   <li class="">
-    <a target="_blank" class="nav-link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    <a target="_blank" class="nav-link no-barba" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
   </li>
   <li class="">
-    <a target="_blank" class="nav-link" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+    <a target="_blank" class="nav-link no-barba" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
   </li>
   <li class="">
-    <a target="_blank" class="nav-link" href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+    <a target="_blank" class="nav-link no-barba" href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
   </li>
   <li class="">
-    <a target="_blank" class="nav-link pr-0" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+    <a target="_blank" class="nav-link no-barba pr-0" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
   </li>
 </ul>
 
+<!-- jQuery CDN -->
 <script
   src="http://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
+
+<!-- Scripts -->
 <script src="{{ "/js/vendors.min.js" }}"></script>
+<script src="{{ "/js/vendors.bundle.js" }}"></script>
+<script src="{{ "/js/app.bundle.js" }}"></script>
 
 <!-- Google Analytics -->
 {{ if .Site.Params.gcse }}

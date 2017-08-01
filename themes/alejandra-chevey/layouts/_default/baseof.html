@@ -8,9 +8,13 @@
           {{ partial "nav.html" . }}
         </div>
         <div class="col-md-8 pull-md-4">
-          {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
-          {{ block "main" . }}{{ end }}
-          {{ partial "footer.html" . }}
+          <div id="barba-wrapper">
+            <div class="barba-container">
+              {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
+              {{ block "main" . }}{{ end }}
+              {{ partial "footer.html" . }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
