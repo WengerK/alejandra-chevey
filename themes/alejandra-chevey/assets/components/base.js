@@ -5,7 +5,7 @@ import '../icons/svg-icons.js';
 import BarbaJS from './barba.js';
 import Waypoints from './waypoints.js';
 
-/* global Barba */
+/* global Barba, $ */
 
 BarbaJS();
 
@@ -14,14 +14,8 @@ function init() {
 }
 
 /**
- * Reset Waypoints after every Page transition of BarbarJS.
+ * Reset Waypoints after every - second - Page transition of BarbarJS.
  */
-Barba.Dispatcher.on('transitionCompleted', function(
-  currentStatus,
-  oldStatus,
-  container
-) {
+Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus) {
   init();
 });
-
-document.addEventListener('DOMContentLoaded', init);
