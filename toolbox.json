@@ -3,17 +3,17 @@
   "dest": "themes/alejandra-chevey/static/",
   "ghpages": "./ghpages/",
   "images": [
-    "themes/alejandra-chevey/static/images/**/*"
+    "themes/alejandra-chevey/assets/images/**/*"
   ],
   "svg": [
-    "themes/alejandra-chevey/static/svg/**/*"
+    "themes/alejandra-chevey/assets/svg/**/*"
   ],
   "icons": [
-    "themes/alejandra-chevey/static/icons/**/*"
+    "themes/alejandra-chevey/assets/icons/**/*"
   ],
   "iconsFontName": "icon",
   "fonts": [
-    "themes/alejandra-chevey/static/fonts/**/*"
+    "themes/alejandra-chevey/assets/fonts/**/*"
   ],
   "vendors": {
     "css": [],
