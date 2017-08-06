@@ -11,6 +11,8 @@ const Waypoints = () => {
       offset: '80%'
     }
   );
+
+  $('.hero-image-scroll').addClass('is-view');
 };
 
 export default Waypoints;
