@@ -18,8 +18,7 @@ const HomeToProject = Barba.BaseTransition.extend({
 
   home: function() {
     // Scroll to top.
-    // Scroll on 1 instead of 0 to remove top bar on mobile.
-    $('body').animate({ scrollTop: 1 }, 200);
+    $('body').animate({ scrollTop: 0 }, 200);
     $('body').addClass('page-is-loading');
 
     const that = this;
