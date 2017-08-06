@@ -19,3 +19,7 @@ function init() {
 Barba.Dispatcher.on('transitionCompleted', function(currentStatus, oldStatus) {
   init();
 });
+
+console.log('Hello dear developer 🙏');
+console.log('Wanna read the code ? Check the Github: github.com/WengerK/alejandra-chevey');
+console.log('Feel free to contact me alejandra.simancas@gmail.com');
