@@ -8,7 +8,7 @@ const Waypoints = () => {
       }
     },
     {
-      offset: '80%'
+      offset: '110%'
     }
   );
 
