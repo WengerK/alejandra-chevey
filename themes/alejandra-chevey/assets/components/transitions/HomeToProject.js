@@ -17,6 +17,9 @@ const HomeToProject = Barba.BaseTransition.extend({
   },
 
   home: function() {
+    // scroll to top
+    $('body').animate({ scrollTop: 0 }, 200);
+
     const that = this;
 
     // Retreive the original clicked link.
