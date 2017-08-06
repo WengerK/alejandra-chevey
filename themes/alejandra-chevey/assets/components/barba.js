@@ -1,95 +1,57 @@
 /* global Barba, $ */
 
+import FadeTransition from './transitions/FadeTransition.js';
+import HomeToProject from './transitions/HomeToProject.js';
+
 const BarbaJS = () => {
+  // let lastClickedLink = undefined;
+
   /**
    * Reload Navigation Menu to update Current highlighted menu.
    */
-  Barba.Dispatcher.on('newPageReady', function(currentStatus) {
+  Barba.Dispatcher.on('newPageReady', function (currentStatus) {
     // get path of current page
-    const link = currentStatus.url
-      .split(window.location.origin)[1];
+    const link = currentStatus.url.split(window.location.origin)[1];
 
     const navigation = document.querySelector('.side-nav');
     const navigationLinks = navigation.querySelectorAll('.nav-link.active');
-    const navigationLinksIsActive = navigation.querySelectorAll(`[href="${link}"]`);
+    const navigationLinksIsActive = navigation.querySelectorAll(
+      `[href="${link}"]`
+    );
 
     Array.prototype.forEach.call(navigationLinks, navigationLink =>
-      navigationLink.classList.remove('active'),
+      navigationLink.classList.remove('active')
     ); // remove CSS class 'active' from all .navigation__links.
 
-    Array.prototype.forEach.call(navigationLinksIsActive, navigationLinkIsActive =>
-      navigationLinkIsActive.classList.add('active'),
+    Array.prototype.forEach.call(
+      navigationLinksIsActive,
+      navigationLinkIsActive => navigationLinkIsActive.classList.add('active')
     ); // add CSS class 'active' from all .navigation__links that need it.
   });
+
+  // Barba.Dispatcher.on('linkClicked', function (HTMLElement) {
+  //   lastClickedLink = HTMLElement;
+  // });
 
   /**
    * Add page transitions.
    */
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     Barba.Pjax.start();
     Barba.Prefetch.init();
 
-    const FadeTransition = Barba.BaseTransition.extend({
-      start: function() {
-        /**
-         * This function is automatically called as soon the Transition starts.
-         * this.newContainerLoading is a Promise for the loading of the new container
-         * (Barba.js also comes with an handy Promise polyfill!).
-         */
-
-        // As soon the loading is finished and the old page is faded out, let's fade the new page.
-        Promise.all([this.newContainerLoading, this.fadeOut()]).then(
-          this.fadeIn.bind(this),
-        );
-      },
-
-      fadeOut: function() {
-        /**
-         * this.oldContainer is the HTMLElement of the old Container.
-         */
-        return $(this.oldContainer).animate({ opacity: 0 }).promise();
-      },
-
-      fadeIn: function() {
-        /**
-         * this.newContainer is the HTMLElement of the new Container.
-         *
-         * At this stage newContainer is on the DOM
-         * (inside our #barba-container and with visibility: hidden).
-         * Please note, newContainer is available just after newContainerLoading is resolved!
-         */
-        const that = this;
-        const $el = $(this.newContainer);
-
-        $(this.oldContainer).hide();
-
-        $el.css({
-          visibility: 'visible',
-          opacity: 0,
-        });
-
-        $el.animate({ opacity: 1 }, 400, function() {
-          /**
-           * Do not forget to call .done() as soon your transition is finished!
-           * .done() will automatically remove from the DOM the old Container
-           */
-
-          that.done();
-        });
-      },
-    });
-
     /**
-     * Next step, you have to tell Barba to use the new Transition
+     * Next step, you have to tell Barba to use the new transitions.
      */
+    Barba.Pjax.getTransition = function () {
+      // Fallback transition.
+      let transition = FadeTransition;
 
-    Barba.Pjax.getTransition = function() {
-      /**
-       * Here you can use your own logic!
-       * For example you can use different Transition based on the current page or link...
-       */
+      if (HomeToProject.valide()) {
+        transition = HomeToProject;
+      }
 
-      return FadeTransition;
+      return transition;
     };
   });
 };
