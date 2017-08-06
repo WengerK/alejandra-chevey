@@ -3,7 +3,7 @@
 import UrlHelpers from './UrlHelpers.js';
 
 const HomeToProject = Barba.BaseTransition.extend({
-  start: function () {
+  start: function() {
     /**
      * This function is automatically called as soon the Transition starts.
      * this.newContainerLoading is a Promise for the loading of the new container
@@ -16,7 +16,7 @@ const HomeToProject = Barba.BaseTransition.extend({
     );
   },
 
-  home: function () {
+  home: function() {
     const that = this;
 
     // Retreive the original clicked link.
@@ -36,13 +36,16 @@ const HomeToProject = Barba.BaseTransition.extend({
       tray.addClass('open-to-right');
 
       // When image is ready & the tray animation is finished, animate the image.
-      image.onload = function () {
-        setTimeout(function () {
-          hero.css('background-image', `url(${link.first().data('heroImage')})`);
+      image.onload = function() {
+        setTimeout(function() {
+          hero.css(
+            'background-image',
+            `url(${link.first().data('heroImage')})`
+          );
           hero.addClass('open-to-left');
 
           // Once the image is shown, load the next page by resolving this promise..
-          setTimeout(function () {
+          setTimeout(function() {
             resolve();
           }, 650);
         }, 650);
@@ -50,7 +53,7 @@ const HomeToProject = Barba.BaseTransition.extend({
     });
   },
 
-  project: function () {
+  project: function() {
     /**
      * this.newContainer is the HTMLElement of the new Container.
      *
@@ -62,7 +65,7 @@ const HomeToProject = Barba.BaseTransition.extend({
     that.done();
   },
 
-  valide: function () {
+  valide: function() {
     const from = UrlHelpers.rmOrigin(Barba.HistoryManager.prevStatus().url);
     const to = UrlHelpers.rmOrigin(Barba.HistoryManager.currentStatus().url);
     console.log(`[Animation] - ${from} to ${to}`);

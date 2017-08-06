@@ -1,7 +1,7 @@
 /* global Barba, $ */
 
 const FadeTransition = Barba.BaseTransition.extend({
-  start: function () {
+  start: function() {
     /**
      * This function is automatically called as soon the Transition starts.
      * this.newContainerLoading is a Promise for the loading of the new container
@@ -14,14 +14,14 @@ const FadeTransition = Barba.BaseTransition.extend({
     );
   },
 
-  fadeOut: function () {
+  fadeOut: function() {
     /**
      * this.oldContainer is the HTMLElement of the old Container.
      */
     return $(this.oldContainer).animate({ opacity: 0 }).promise();
   },
 
-  fadeIn: function () {
+  fadeIn: function() {
     /**
      * this.newContainer is the HTMLElement of the new Container.
      *
@@ -39,7 +39,7 @@ const FadeTransition = Barba.BaseTransition.extend({
       opacity: 0
     });
 
-    $el.animate({ opacity: 1 }, 400, function () {
+    $el.animate({ opacity: 1 }, 400, function() {
       /**
        * Do not forget to call .done() as soon your transition is finished!
        * .done() will automatically remove from the DOM the old Container

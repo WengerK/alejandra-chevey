@@ -9,7 +9,7 @@ const BarbaJS = () => {
   /**
    * Reload Navigation Menu to update Current highlighted menu.
    */
-  Barba.Dispatcher.on('newPageReady', function (currentStatus) {
+  Barba.Dispatcher.on('newPageReady', function(currentStatus) {
     // get path of current page
     const link = currentStatus.url.split(window.location.origin)[1];
 
@@ -36,14 +36,14 @@ const BarbaJS = () => {
   /**
    * Add page transitions.
    */
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function() {
     Barba.Pjax.start();
     Barba.Prefetch.init();
 
     /**
      * Next step, you have to tell Barba to use the new transitions.
      */
-    Barba.Pjax.getTransition = function () {
+    Barba.Pjax.getTransition = function() {
       // Fallback transition.
       let transition = FadeTransition;
 
