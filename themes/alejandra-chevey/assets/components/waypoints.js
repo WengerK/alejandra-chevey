@@ -12,7 +12,12 @@ const Waypoints = () => {
     }
   );
 
-  $('.hero-image-scroll').addClass('is-view');
+  // Project page
+  $('.hero-image-title').addClass('is-view');
+  setTimeout(function () {
+    $('.hero-image-scroll').addClass('is-view');
+  }, 950);
+
 };
 
 export default Waypoints;
