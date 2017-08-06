@@ -1,3 +1,11 @@
 @charset "UTF-8";
 
 body > .container-fluid { margin: $grid-gutter-width-base/2 0; }
+
+#barba-wrapper {
+  overflow: hidden;
+}
+
+.barba-container {
+  position: relative;
+}

@@ -9,3 +9,14 @@
   padding: 0;
   border: 0;
 }
+
+.page-is-loading {
+  cursor: wait !important;
+
+  .barba-container {
+    pointer-events: none;
+  }
+}
+
+@include bg-variant('.bg-white', $white);
+@include bg-variant('.bg-black', $black);
