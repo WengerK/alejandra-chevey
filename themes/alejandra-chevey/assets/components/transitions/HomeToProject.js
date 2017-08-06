@@ -17,38 +17,37 @@ const HomeToProject = Barba.BaseTransition.extend({
   },
 
   home: function () {
-    const to = UrlHelpers.rmOrigin(Barba.HistoryManager.currentStatus().url);
-
     const that = this;
-    const link = $(that.oldContainer).find(`a[href="${to}"]`);
-    console.log(link.first());
 
+    // Retreive the original clicked link.
+    const to = UrlHelpers.rmOrigin(Barba.HistoryManager.currentStatus().url);
+    const link = $(that.oldContainer).find(`a[href="${to}"]`);
+
+    // Select containers wich for animations.
     const tray = $(that.oldContainer).find('.transition-tray-overlay');
     const hero = $(that.oldContainer).find('.transition-hero-image');
 
+    // Preload the image.
     const image = new Image();
     image.src = link.first().data('heroImage');
 
     return new Promise((resolve, reject) => {
+      // Animate the tray.
       tray.addClass('open-to-right');
 
+      // When image is ready & the tray animation is finished, animate the image.
       image.onload = function () {
         setTimeout(function () {
           hero.css('background-image', `url(${link.first().data('heroImage')})`);
           hero.addClass('open-to-left');
+
+          // Once the image is shown, load the next page by resolving this promise..
           setTimeout(function () {
             resolve();
           }, 650);
         }, 650);
       };
     });
-
-    // const $el = $(this.newContainer);
-
-    /**
-     * this.oldContainer is the HTMLElement of the old Container.
-     */
-    // return $(this.oldContainer).animate({ opacity: 0 }).promise();
   },
 
   project: function () {
@@ -60,24 +59,7 @@ const HomeToProject = Barba.BaseTransition.extend({
      * Please note, newContainer is available just after newContainerLoading is resolved!
      */
     const that = this;
-    // const $el = $(this.newContainer);
-
-    $(this.oldContainer).hide();
     that.done();
-
-    // $el.css({
-    //   visibility: 'visible',
-    //   opacity: 0
-    // });
-
-    // $el.animate({ opacity: 1 }, 400, function () {
-    //   /**
-    //    * Do not forget to call .done() as soon your transition is finished!
-    //    * .done() will automatically remove from the DOM the old Container
-    //    */
-
-    //   that.done();
-    // });
   },
 
   valide: function () {
