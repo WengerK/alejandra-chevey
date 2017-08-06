@@ -99,6 +99,18 @@
   }
 }
 
+@keyframes from-bottom-to-top {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero-image-scroll {
   position: absolute;
   right: 0;
@@ -109,19 +121,20 @@
   transform: translateY(100%);
   transition:
     opacity 0.9s 0.1s,
-    transform 0.6s ease-in-out;
+    transform 0.6s ease-out;
 
   &-text {
     display: block;
     margin: 0.2em;
     text-align: center;
+    opacity: 0;
   }
 
   &:after {
     content: '';
     display: block;
     margin: 0 auto;
-    width: 1px;
+    width: 2px;
     height: 1.6em;
     background-color: currentColor;
   }
@@ -129,5 +142,9 @@
   &.is-view {
     opacity: 1;
     transform: translateY(0);
+
+    .hero-image-scroll-text {
+      animation: fade-in 0.25s ease-in 0.7s forwards;
+    }
   }
 }
