@@ -22,9 +22,9 @@
   crossorigin="anonymous"></script>
 
 <!-- Scripts -->
-<script src="{{ "/js/vendors.min.js" }}"></script>
-<script src="{{ "/js/vendors.bundle.js" }}"></script>
-<script src="{{ "/js/app.bundle.js" }}"></script>
+<script src="{{ "/js/vendors.min.js" }}?{{ .Now.Unix }}"></script>
+<script src="{{ "/js/vendors.bundle.js" }}?{{ .Now.Unix }}"></script>
+<script src="{{ "/js/app.bundle.js" }}?{{ .Now.Unix }}"></script>
 
 <!-- Google Analytics -->
 {{ if .Site.Params.gcse }}
