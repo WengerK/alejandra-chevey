@@ -26,18 +26,14 @@
 <script src="{{ "/js/vendors.bundle.js" }}?{{ now.Unix }}"></script>
 <script src="{{ "/js/app.bundle.js" }}?{{ now.Unix }}"></script>
 
-<!-- Google Analytics -->
-{{ if .Site.Params.gcse }}
 <script>
-  (function() {
-    var cx = '{{ .Site.Params.gcse }}';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
+  (function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+    (i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date(); a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-{{ end }}
+  ga('create', 'UA-75790163-1', 'auto');
+  ga('send', 'pageview');
+</script>
