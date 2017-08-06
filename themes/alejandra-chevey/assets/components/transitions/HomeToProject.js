@@ -20,6 +20,7 @@ const HomeToProject = Barba.BaseTransition.extend({
     // Scroll to top.
     // Scroll on 1 instead of 0 to remove top bar on mobile.
     $('body').animate({ scrollTop: 1 }, 200);
+    $('body').addClass('page-is-loading');
 
     const that = this;
 
@@ -65,6 +66,8 @@ const HomeToProject = Barba.BaseTransition.extend({
      * (inside our #barba-container and with visibility: hidden).
      * Please note, newContainer is available just after newContainerLoading is resolved!
      */
+    $('body').removeClass('page-is-loading');
+
     const that = this;
     that.done();
   },
