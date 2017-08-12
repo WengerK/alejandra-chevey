@@ -45,3 +45,27 @@ a.marker-highlight {
   &:hover { color: $purple-pizza; }
   &:after { background-color: $purple-pizza; }
 }
+
+a.underline-on-hover {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    transform: scale3d(0, 1, 1);
+    transform-origin: left center;
+  }
+
+  &:hover:after {
+    transform: scale3d(1, 1, 1);
+  }
+}
