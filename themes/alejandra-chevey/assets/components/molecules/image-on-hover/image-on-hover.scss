@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+img.image-on-hover {
+  pointer-events: none;
+  display: block;
+  position: fixed;
+  right: 56px;
+  top: 60px;
+  height: calc(100vh - 120px);
+  z-index: 1;
+  opacity: 0;
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translate3d(0, 200px, 0) rotateY(5deg) rotateZ(-5deg);
+
+  &.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateY(0deg);
+  }
+}
