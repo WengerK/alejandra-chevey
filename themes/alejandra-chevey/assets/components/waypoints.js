@@ -1,6 +1,9 @@
 /* global Waypoint $ */
 
+
 const Waypoints = () => {
+  const media_md = window.matchMedia('(min-width: 768px)');
+
   $('.page-section-animation').waypoint(
     function(direction) {
       if (direction === 'down') {
@@ -21,10 +24,14 @@ const Waypoints = () => {
   // Image on Hover.
   $('a.image-on-hover')
     .on('mouseenter', function() {
-      $('#'+$(this).data('imageAppear')).addClass('active');
+      if (media_md.matches) {
+        $('#'+$(this).data('imageAppear')).addClass('active');
+      }
     })
     .on('mouseleave', function() {
-      $('#'+$(this).data('imageAppear')).removeClass('active');
+      if (media_md.matches) {
+        $('#'+$(this).data('imageAppear')).removeClass('active');
+      }
     });
 };
 

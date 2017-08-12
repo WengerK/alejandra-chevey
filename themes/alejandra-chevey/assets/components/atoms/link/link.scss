@@ -52,7 +52,10 @@ a.underline-on-hover {
   text-decoration: none;
 
   &:after {
-    content: "";
+    @include media-breakpoint-up(md) {
+      content: "";
+    }
+
     position: absolute;
     left: 0;
     bottom: 0;
