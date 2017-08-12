@@ -9,11 +9,18 @@ img.image-on-hover {
   height: calc(100vh - 120px);
   z-index: 1;
   opacity: 0;
-  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1);
-  transform: translate3d(0, 200px, 0) rotateY(5deg) rotateZ(-5deg);
+  transition:
+    transform 1s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  transform:
+    translateX(-30px)
+    scale3d(0, 1, 1);
+  transform-origin: 0 0;
 
   &.active {
     opacity: 1;
-    transform: translate3d(0, 0, 0) rotateY(0deg);
+    transform:
+      translateX(0)
+      scale3d(1, 1, 1);
   }
 }
