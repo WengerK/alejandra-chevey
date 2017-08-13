@@ -6,8 +6,7 @@ img.image-on-hover {
   position: fixed;
   right: 56px;
   top: 60px;
-  height: calc(100vh - 120px);
-  z-index: 1;
+  z-index: -1;
   opacity: 0;
   transition:
     transform 1s cubic-bezier(0.19, 1, 0.22, 1),
