@@ -32,7 +32,21 @@ const Waypoints = () => {
       if (media_md.matches) {
         $('#'+$(this).data('imageAppear')).removeClass('active');
       }
-    });
+    })
+    .on('click', function(e) {
+      e.preventDefault();
+
+      const that = this;
+      // Remove others on click.
+      $('img.image-on-hover.active').removeClass('active');
+      // Show current.
+      $('#'+$(that).data('imageAppear')).toggleClass('active');
+
+      // After a quick delay, hide the current.
+      setTimeout(function () {
+        $('#'+$(that).data('imageAppear')).removeClass('active');
+      }, 1500);
+    })
 };
 
 export default Waypoints;
