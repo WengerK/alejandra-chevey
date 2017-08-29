@@ -11,7 +11,7 @@
   background-position: 50%;
   background-size: cover;
   z-index: 1;
-  font-size: $font-size-h1;
+  font-size: $display1-size;
   overflow: hidden;
 
   @include media-breakpoint-up(md) {
