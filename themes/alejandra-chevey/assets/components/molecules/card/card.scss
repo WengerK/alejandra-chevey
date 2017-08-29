@@ -4,6 +4,10 @@
   border: none;
 }
 
+.card-img-top {
+  object-fit: cover;
+}
+
 .card-clickable {
   position: relative;
 
