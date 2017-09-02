@@ -15,9 +15,7 @@ const BarbaJS = () => {
 
     const navigation = document.querySelector('.side-nav');
     const navigationLinks = navigation.querySelectorAll('.nav-link.active');
-    const navigationLinksIsActive = navigation.querySelectorAll(
-      `[href="${link}"]`
-    );
+    const navigationLinksIsActive = navigation.querySelectorAll(`[href="${link}"]`);
 
     Array.prototype.forEach.call(navigationLinks, navigationLink =>
       navigationLink.classList.remove('active')

@@ -22,6 +22,9 @@ const FadeTransition = Barba.BaseTransition.extend({
   },
 
   fadeIn: function() {
+      // Scroll to top.
+      $('body').animate({ scrollTop: 0 }, 1);
+
     /**
      * this.newContainer is the HTMLElement of the new Container.
      *
