@@ -4,10 +4,10 @@
   {{ $currentPage := . }}
   <ul class="nav flex-md-column text-right">
     <li class="nav-item">
-      <a class="nav-link d-inline pl-0 py-0 px-md-0 marker-highlight marker-blue {{ if eq $currentPage.URL "/" }}active{{ end }}" href="/">work</a>
+      <a class=" d-inline pl-0 py-0 px-md-0 {{ if eq $currentPage.URL "/" }}active{{ end }}" href="/">work</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link d-inline py-0 px-md-0 marker-highlight marker-pink {{ if eq $currentPage.URL "/about/" }}active{{ end }}" href="/about/">about</a>
+      <a class=" d-inline py-0 px-md-0 {{ if eq $currentPage.URL "/about/" }}active{{ end }}" href="/about/">about</a>
     </li>
   </ul>
 
