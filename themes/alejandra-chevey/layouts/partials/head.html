@@ -5,12 +5,10 @@
   <meta name="robots" content="noindex, nofollow">
 
 <!-- Site Title & default metas -->
-{{- with .Title | default .Site.Title }}
-  <title>{{ . }}</title>
-  <meta name="title" content="{{ . }}">
-  <meta property="og:title" content="{{ . }}" />
-  <meta name="twitter:title" content="{{ . | truncate 70 }}" />
-{{- end }}
+<title>{{ .Title | default .Site.Title }}{{ if not .IsHome }} | {{ .Site.Title }} {{ end }}</title>
+<meta name="title" content="{{ .Title | default .Site.Title }}{{ if not .IsHome }} | {{ .Site.Title }} {{ end }}">
+<meta property="og:title" content="{{ .Title | default .Site.Title }}{{ if not .IsHome }} | {{ .Site.Title }} {{ end }}" />
+<meta name="twitter:title" content="{{ .Title | default .Site.Title }}{{ if not .IsHome }} | {{ .Site.Title }} {{ end }}" />
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta name="author" content="{{ .Site.Params.Author }}"/>
 

@@ -8,7 +8,7 @@ disableKinds = ["RSS", "sitemap"]
 
 [params]
   author = "Alejandra Chevey"
-  subtitle = "Freelance Digital Designer based in London. I collaborate with inspiring start-ups, businesses and brands to help shape their digital projects."
+  subtitle = "Digital designer based in Switzerland. I passionately design with the conviction that a perfect harmony between aesthetics and functionality enhances human experiences."
 
 [params.cover]
   image = "/images/social.jpg"
