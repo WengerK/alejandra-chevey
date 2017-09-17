@@ -2,6 +2,9 @@
 <html lang="{{ .Lang }}">
   {{ partial "head.html" . }}
   <body>
+      <pre>
+          {{ printf "%#v" $.Site }}
+          </pre>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-4 push-md-8">

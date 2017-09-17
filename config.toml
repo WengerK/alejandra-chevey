@@ -1,7 +1,16 @@
 baseURL = "https://alejandra-chevey.com/"
 languageCode = "en-us"
-title = "Alejandra"
+title = "Alejandra Chevey"
 theme = "alejandra-chevey"
 disableKinds = ["RSS", "sitemap"]
 
 [taxonomies]
+
+[params]
+  author = "Alejandra Chevey"
+  subtitle = "Freelance Digital Designer based in London. I collaborate with inspiring start-ups, businesses and brands to help shape their digital projects."
+
+[params.cover]
+  image = "/images/social.jpg"
+  width = "1200"
+  height = "630"
