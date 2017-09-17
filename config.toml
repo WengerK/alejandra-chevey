@@ -1,7 +1,16 @@
 baseURL = "https://alejandra-chevey.com/"
 languageCode = "en-us"
-title = "Alejandra"
+title = "Alejandra Chevey"
 theme = "alejandra-chevey"
 disableKinds = ["RSS", "sitemap"]
 
 [taxonomies]
+
+[params]
+  author = "Alejandra Chevey"
+  subtitle = "Digital designer based in Switzerland. I passionately design with the conviction that a perfect harmony between aesthetics and functionality enhances human experiences."
+
+[params.cover]
+  image = "/images/social.jpg"
+  width = "1200"
+  height = "630"
