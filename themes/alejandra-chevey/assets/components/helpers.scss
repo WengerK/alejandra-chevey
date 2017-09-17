@@ -18,5 +18,17 @@
   }
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.zindex-popover {
+  z-index: $zindex-popover;
+}
+
+.zindex-tooltip {
+  z-index: $zindex-tooltip;
+}
+
 @include bg-variant('.bg-white', $white);
 @include bg-variant('.bg-black', $black);

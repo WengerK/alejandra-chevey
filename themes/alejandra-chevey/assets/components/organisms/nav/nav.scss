@@ -4,6 +4,6 @@
   .side-nav {
     position: fixed;
     right: $grid-gutter-width-base / 2;
-    height: calc(100vh - #{$grid-gutter-width-base});
+    height: calc(100vh - #{$grid-gutter-width-base} * 2);
   }
 }
