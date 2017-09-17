@@ -22,3 +22,7 @@
     transform: translateX(-100%);
   }
 }
+
+body:not(.is-home) .tray-overlay {
+  display: none;
+}

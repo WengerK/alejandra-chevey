@@ -66,6 +66,7 @@ const HomeToProject = Barba.BaseTransition.extend({
      * Please note, newContainer is available just after newContainerLoading is resolved!
      */
     $('body').removeClass('page-is-loading');
+    $('body').removeClass('is-home');
 
     const that = this;
     that.done();

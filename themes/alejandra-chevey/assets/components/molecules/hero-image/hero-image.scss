@@ -21,7 +21,7 @@
 
 .hero-image.transition-hero-image {
   position: absolute;
-  width: calc(100% + #{$grid-gutter-width-base/2});
+  width: 100%;
   height: calc(100vh - #{$grid-gutter-width-base} - 36px); // 36px from the mobile navigation.
   opacity: 1;
   z-index: -1;

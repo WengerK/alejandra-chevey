@@ -1,0 +1,32 @@
+@charset 'utf-8';
+
+.image-discover-img { width: 100%; }
+
+.image-discover-content { margin-bottom: $grid-gutter-width-base; }
+
+@include media-breakpoint-up(lg) {
+  .image-discover {
+    position: relative;
+
+    &:hover {
+      cursor: e-resize;
+      .image-discover-img { transform: translateX(50%); }
+    }
+  }
+
+  .image-discover-img {
+    position: relative;
+    width: 70%;
+    top: 0;
+    left: 30%;
+    will-change: transform;
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .image-discover-content {
+    position: absolute;
+    bottom: $grid-gutter-width-base / 2;
+    width: 60%;
+    margin-bottom: 0;
+  }
+}

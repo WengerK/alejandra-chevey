@@ -1,5 +1,7 @@
 /* global Barba, $ */
 
+import UrlHelpers from './UrlHelpers.js';
+
 const FadeTransition = Barba.BaseTransition.extend({
   start: function() {
     /**
@@ -47,6 +49,11 @@ const FadeTransition = Barba.BaseTransition.extend({
        * Do not forget to call .done() as soon your transition is finished!
        * .done() will automatically remove from the DOM the old Container
        */
+      const to = UrlHelpers.rmOrigin(Barba.HistoryManager.currentStatus().url);
+
+      if (to === '/') {
+        $('body').addClass('is-home');
+      }
 
       that.done();
     });
