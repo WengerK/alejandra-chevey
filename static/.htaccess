@@ -1,0 +1,12 @@
+# Prevent viewing of .htaccess file
+<Files .htaccess>
+  order allow,deny
+  deny from all
+</Files>
+
+# Prevent directory listings
+Options All -Indexes
+
+# RewriteCond %{REQUEST_URI} ^/projects[/]?
+# RewriteCond %{REQUEST_URI} !^/projects/+[/]?
+# RewriteRule (.*) / [R=301,L]
