@@ -12,21 +12,6 @@
     width: 100%;
     height: 500px;
     object-fit: cover;
-    transition:
-      transform 0.1554s cubic-bezier(0.19, 1, 0.22, 1),
-      opacity 0.42s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: calc(100% - 1px);
-    background: $mine-shaft;
   }
 }
 
@@ -41,41 +26,20 @@
     width: 100%;
   }
 
+  .card-hover-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+  }
+
   &:hover {
-    @include media-breakpoint-up(sm) {
-      .card-img-top img.anim-top-left {
-        transform: translateX(-10px) translateY(-10px);
-      }
-
-      .card-img-top img.anim-top-right {
-        transform: translateX(10px) translateY(-10px);
-      }
-
-      .card-img-top img.anim-bottom-left {
-        transform: translateX(-10px) translateY(10px);
-      }
-
-      .card-img-top img.anim-bottom-right {
-        transform: translateX(10px) translateY(10px);
-      }
-    }
-
-    @include media-breakpoint-down(sm) {
-      .card-img-top img.anim-top-left {
-        transform: translateY(-10px);
-      }
-
-      .card-img-top img.anim-top-right {
-        transform: translateY(-10px);
-      }
-
-      .card-img-top img.anim-bottom-left {
-        transform: translateY(10px);
-      }
-
-      .card-img-top img.anim-bottom-right {
-        transform: translateY(10px);
-      }
+    .card-hover-shadow {
+      opacity: 1;
+      box-shadow: inset 0 0 0 10px $mine-shaft;
     }
   }
 }
