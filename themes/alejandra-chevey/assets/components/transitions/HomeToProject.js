@@ -18,7 +18,7 @@ const HomeToProject = Barba.BaseTransition.extend({
 
   home: function() {
     // Scroll to top.
-    $('body').animate({ scrollTop: 0 }, 200);
+    $('html,body').animate({ scrollTop: 0 }, 200);
     $('body').addClass('page-is-loading');
 
     const that = this;
@@ -48,7 +48,7 @@ const HomeToProject = Barba.BaseTransition.extend({
           );
           hero.addClass('open-to-left');
 
-          // Once the image is shown, load the next page by resolving this promise..
+          // Once the image is shown, load the next page by resolving this promise.
           setTimeout(function() {
             resolve();
           }, 650);
