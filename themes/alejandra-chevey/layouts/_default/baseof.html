@@ -9,7 +9,7 @@
 <html lang="{{ .Lang }}">
   {{ partial "head.html" . }}
   <body class="overflowx-hidden {{ if .IsHome }}is-home{{ end }}">
-    <div class="container-fluid">
+    <div class="container-fluid overflowx-hidden">
       <div class="row">
         <div class="col-md-4 push-md-8 zindex-tooltip">
           {{ partial "nav.html" . }}
