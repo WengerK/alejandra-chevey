@@ -1,5 +1,9 @@
 @charset 'utf-8';
 
+.card {
+  margin-bottom: $grid-gutter-width-base;
+}
+
 .card-borderless {
   border: none;
 }
@@ -13,6 +17,10 @@
     height: 500px;
     object-fit: cover;
   }
+}
+
+.card-title {
+  margin-bottom: 0;
 }
 
 .card-clickable {
