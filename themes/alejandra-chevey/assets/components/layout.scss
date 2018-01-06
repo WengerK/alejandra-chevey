@@ -5,3 +5,7 @@ body > .container-fluid { margin: $grid-gutter-width-base ($grid-gutter-width-ba
 .barba-container {
   position: relative;
 }
+
+.is-home .main-container {
+  overflow-x: hidden;
+}
