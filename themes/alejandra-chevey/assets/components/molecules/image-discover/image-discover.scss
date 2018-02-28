@@ -9,7 +9,7 @@
     position: relative;
 
     &:hover {
-      cursor: e-resize;
+      cursor: url('../svg/arrow-right.svg'), auto;
       .image-discover-img { transform: translateX(50%); }
     }
   }
