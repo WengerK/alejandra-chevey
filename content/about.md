@@ -5,4 +5,3 @@ draft: false
 slug: about
 layout: "about"
 ---
-
