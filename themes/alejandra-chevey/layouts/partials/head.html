@@ -12,6 +12,9 @@
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta name="author" content="{{ .Site.Params.Author }}"/>
 
+<!-- Disable crawling -->
+<meta property="robots" content="noindex, nofollow" />
+
 <!-- Site Descriptions -->
 {{- with .Description | default .Site.Params.subtitle | default .Summary }}
   <meta name="description" content="{{ . }}">
