@@ -1,44 +1,48 @@
 # Alejandra Chevey
-[Hugo](https://gohugo.io/) website generator coupled with [Toolbox](https://frontend.github.io/toolbox/) stlyeguide.
 
-[ ![Codeship Status for WengerK/alejandra-chevey](https://app.codeship.com/projects/17efd080-54fc-0135-37a2-66916a474cf7/status?branch=master)](https://app.codeship.com/projects/235460)
-[ ![Codeship Status for WengerK/alejandra-chevey](https://app.codeship.com/projects/17efd080-54fc-0135-37a2-66916a474cf7/status?branch=dev)](https://app.codeship.com/projects/235460)
+[Hugo](https://gohugo.io/) website generated with [Toolbox](https://frontend.github.io/toolbox/) styleguide & [Codeship](https://codeship.com) CI/CD.
+
+production status: [ ![Codeship Status for WengerK/alejandra-chevey](https://app.codeship.com/projects/17efd080-54fc-0135-37a2-66916a474cf7/status?branch=master)](https://app.codeship.com/projects/235460)
+
+staging status: [ ![Codeship Status for WengerK/alejandra-chevey](https://app.codeship.com/projects/17efd080-54fc-0135-37a2-66916a474cf7/status?branch=dev)](https://app.codeship.com/projects/235460)
 
 ## 🔧 Prerequisites
 
 First of all, you need to have the following tools installed globally on your environment:
 
-  * hugo
-  * npm
-  * yarn
+* hugo
+* npm
+* yarn
 
 ## 🚛 Install
 
-1. Setup your virtualhost (like `http://alejandra-chevey.dev`) to serve `/public`.
+1. Setup your virtualhost (like `http://alejandra-chevey.test`) to serve `/public`.
 
-2. Install Hugo and dependencies using brew
+    You must use the domaine `alejandra-chevey.test`, localy, if you want to use the `Typekit` kit of fonts.
 
-  ```bash
-  $ brew install hugo
-  ```
+1. Install Hugo and dependencies using brew
 
-2. Install Toolbox and dependencies using yarn
+    ```bash
+    brew install hugo
+    ```
 
-  ```bash
-  $ yarn install
-  ```
+1. Install Toolbox and dependencies using yarn
 
-3. Build the website
+    ```bash
+    yarn install
+    ```
 
-  ```bash
-  $ hugo server -D
-  ```
+1. Build the website
+
+    ```bash
+    hugo server -D
+    ```
 
 ## After a git pull/merge
 
   ```bash
-  $ yarn build
-  $ hugo server
+  yarn build
+  hugo server
   ```
 
 ## 🎨 Build the theme
@@ -46,18 +50,18 @@ First of all, you need to have the following tools installed globally on your en
 The main styleguide of **Alejandra Chevey** is inside this project under `themes/alejandra-chevey/assets/`.
 The styleguide is then processed using [Toolbox](https://frontend.github.io/toolbox/).
 
-You first need to setup the work environment by running `$ yarn install`.
+You first need to setup the work environment by running `yarn install`.
 
 You can generate the styleguide and watch it:
 
   ```bash
-  $ yarn start
+  yarn start
   ```
 
 You can generate only the built assets for production by running:
 
   ```bash
-  $ yarn build
+  yarn build
   ```
 
 For more help about Toolbox, the [official documentation](http://frontend.github.io/toolbox/toolbox/#build-the-styleguide) is your best friend.
@@ -68,7 +72,7 @@ For more help about Toolbox, the [official documentation](http://frontend.github
 
   ```bash
   # You need to have ruby & bundler installed
-  $ bundle install
+  bundle install
   ```
 
 ### Each times
@@ -76,9 +80,15 @@ For more help about Toolbox, the [official documentation](http://frontend.github
 We use Capistrano to deploy:
 
   ```bash
-  $ bundle exec cap -T
-  $ bundle exec cap staging deploy
+  bundle exec cap -T
+  bundle exec cap staging deploy
   ```
 
+## 🌐 Hosting & DNS
 
+Solution hosted at [Webfaction](https://www.webfaction.com) & DNS at [Gandi](https://www.gandi.net).
+
+### SSL & Let's Encrypte
+
+Managed throught [ACME for Webfaction](https://github.com/gregplaysguitar/acme-webfaction).
 

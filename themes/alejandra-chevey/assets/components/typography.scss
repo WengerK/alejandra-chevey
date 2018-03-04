@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+html {
+  font-size: 28px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 48px;
+  }
+}
+
+p {
+  line-height: 1.3rem;
+}

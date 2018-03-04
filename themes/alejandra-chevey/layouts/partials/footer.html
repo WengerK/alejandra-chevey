@@ -1,22 +1,34 @@
-footer
+<ul class="nav flex-row justify-content-end w-100 hidden-md-up">
+  <li class="">
+    <a target="_blank" title="mail" class="nav-link no-barba" href="mailto:a.chevey@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+  </li>
+  <li class="">
+    <a target="_blank" title="twitter" class="nav-link no-barba" href="https://twitter.com/alechevey"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+  </li>
+  <li class="">
+    <a target="_blank" title="dribbble" class="nav-link no-barba" href="https://dribbble.com/alechevey"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+  </li>
+</ul>
 
+<!-- jQuery CDN -->
 <script
   src="http://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script src="{{ "js/vendors.min.js" }}"></script>
 
-<!-- Google Analytics -->
-{{ if .Site.Params.gcse }}
+<!-- Scripts -->
+<script src="{{ "/js/vendors.min.js" }}?{{ now.Unix }}"></script>
+<script src="{{ "/js/vendors.bundle.js" }}?{{ now.Unix }}"></script>
+<script src="{{ "/js/app.bundle.js" }}?{{ now.Unix }}"></script>
+
 <script>
-  (function() {
-    var cx = '{{ .Site.Params.gcse }}';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
+  (function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+    (i[r].q = i[r].q || []).push(arguments)
+}, i[r].l = 1 * new Date(); a = s.createElement(o),
+    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-75790163-1', 'auto');
+  ga('send', 'pageview');
 </script>
-{{ end }}

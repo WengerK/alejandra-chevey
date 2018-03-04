@@ -1,1 +1,28 @@
-nav
+<div class="tray-overlay bg-white hidden-sm-down"></div>
+
+<nav role="navigation" class="zindex-tooltip side-nav d-flex flex-md-column align-items-center align-items-md-end justify-content-between">
+  <a href="/" class="logo flex-last flex-md-first text-right">
+    <span class="hidden-md-up nav-item">ale</span><span class="hidden-sm-down">alejandra</span><span class="hidden-sm-down"><br>chevey</span></a>
+
+  {{ $currentPage := . }}
+  <ul class="nav flex-md-column text-right">
+    <li class="nav-item mr-3 mr-md-0">
+      <a class=" d-inline pl-0 py-0 px-md-0 {{ if eq $currentPage.URL "/" }}active{{ end }}" href="/">work</a>
+    </li>
+    <li class="nav-item">
+      <a class=" d-inline py-0 px-md-0 {{ if eq $currentPage.URL "/about/" }}active{{ end }}" href="/about/">about</a>
+    </li>
+  </ul>
+
+  <ul class="nav flex-column align-items-end justify-content-between w-100 hidden-sm-down">
+    <li class="d-inline-flex mt-0">
+      <a target="_blank" class="display-3 no-barba" href="mailto:a.chevey@gmail.com">mail</a>
+    </li>
+    <li class="d-inline-flex mt-0">
+      <a target="_blank" class="display-3 no-barba" href="https://twitter.com/alechevey">twitter</a>
+    </li>
+    <li  class="d-inline-flex mt-0">
+      <a target="_blank" class="display-3 no-barba" href="https://dribbble.com/alechevey">dribbble</a>
+    </li>
+  </ul>
+</nav>

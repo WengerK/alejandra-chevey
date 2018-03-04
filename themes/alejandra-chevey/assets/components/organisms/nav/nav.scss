@@ -1,0 +1,17 @@
+@charset 'utf-8';
+
+.nav-item {
+  font-size: 0.8rem;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .side-nav {
+    position: fixed;
+    right: $grid-gutter-width-base / 2;
+    height: calc(100vh - #{$grid-gutter-width-base} * 2);
+  }
+}

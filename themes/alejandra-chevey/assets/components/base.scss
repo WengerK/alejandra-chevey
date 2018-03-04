@@ -3,6 +3,10 @@
 // init:
 @import '../config/variables';
 @import '../config/bootstrap';
+@import 'layout';
+@import 'typography';
+@import 'animations';
+@import 'helpers';
 
 // Don't edit the following sections, they should always be preceded by a blank
 // line and have exactly those names for the `$ yo toolbox:generate` command
@@ -10,9 +14,18 @@
 
 //
 // atoms:
+@import 'atoms/link/link';
+@import 'atoms/tray-overlay/tray-overlay';
 
 //
 // molecules:
+@import 'molecules/card/card';
+@import 'molecules/hero-image/hero-image';
+@import 'molecules/image-on-hover/image-on-hover';
+@import 'molecules/image-discover/image-discover';
+@import 'molecules/image-overflow/image-overflow';
 
 //
 // organisms:
+@import 'organisms/nav/nav';
+@import 'organisms/footer/footer';

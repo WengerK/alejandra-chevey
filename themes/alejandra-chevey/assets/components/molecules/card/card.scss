@@ -1,0 +1,58 @@
+@charset 'utf-8';
+
+.card {
+  margin-bottom: $grid-gutter-width-base;
+}
+
+.card-borderless {
+  border: none;
+}
+
+.card-img-top {
+  position: relative;
+  max-height: 500px;
+
+  img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+.card-clickable {
+  position: relative;
+
+  .card-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .card-hover-shadow {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s;
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  &:hover {
+    .card-hover-shadow {
+      opacity: 1;
+      box-shadow: inset 0 0 0 10px $mine-shaft;
+    }
+  }
+}

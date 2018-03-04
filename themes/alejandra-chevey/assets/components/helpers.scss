@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.visually-hidden {
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.page-is-loading {
+  cursor: wait !important;
+
+  .barba-container {
+    pointer-events: none;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.img-mb {
+  margin-bottom: $grid-gutter-width-base;
+}
+
+.title-offset {
+  margin-top: -0.2em;
+}
+
+.overflowx-hidden {
+  overflow-x: hidden;
+}
+
+.zindex-popover {
+  z-index: $zindex-popover;
+}
+
+.zindex-tooltip {
+  z-index: $zindex-tooltip;
+}
+
+@include bg-variant('.bg-white', $white);
+@include bg-variant('.bg-black', $black);

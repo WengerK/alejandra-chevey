@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+img.image-on-hover {
+  pointer-events: none;
+  display: block;
+  position: fixed;
+  right: 56px;
+  top: 60px;
+  z-index: -1;
+  opacity: 0;
+  transition:
+    transform 1s cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  transform:
+    translateX(-30px)
+    scale3d(0, 1, 1);
+  transform-origin: 0 0;
+
+  &.active {
+    opacity: 1;
+    transform:
+      translateX(0)
+      scale3d(1, 1, 1);
+  }
+}
