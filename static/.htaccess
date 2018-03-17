@@ -7,6 +7,11 @@
 # Prevent directory listings
 Options All -Indexes
 
+# Redirecting from HTTP to HTTPS
+# RewriteEngine On
+# RewriteCond %{HTTP:X-Forwarded-SSL} !on
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
 # RewriteCond %{REQUEST_URI} ^/projects[/]?
 # RewriteCond %{REQUEST_URI} !^/projects/+[/]?
 # RewriteRule (.*) / [R=301,L]
