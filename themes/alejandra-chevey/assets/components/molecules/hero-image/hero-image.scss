@@ -45,7 +45,11 @@
 
 .hero-image-title {
   position: relative;
-  font-size: 3rem;
+  font-size: $display2-size;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 3rem;
+  }
 
   @include media-breakpoint-up(md) {
     font-size: $display2-size;
