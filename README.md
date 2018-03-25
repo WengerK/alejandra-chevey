@@ -85,7 +85,7 @@ You can generate only the built assets for production by running:
   yarn build
   ```
 
-For more help about Toolbox, the [official documentation](http://frontend.github.io/toolbox/toolbox/#build-the-styleguide) is your best friend.
+For more help about Toolbox, the [official documentation](http://frontend.github.io/toolbox/introduction.html) is your best friend.
 
 ## 🚀 Deploy
 
