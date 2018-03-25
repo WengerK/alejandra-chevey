@@ -1,0 +1,2 @@
+echo "\n🛂  \033[0;32mRunning HTML Validator ...\033[0m"
+html5validator --root public
