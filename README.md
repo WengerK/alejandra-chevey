@@ -2,9 +2,9 @@
 
 [Hugo](https://gohugo.io/) website generated with [Toolbox](https://frontend.github.io/toolbox/) styleguide & [Codeship](https://codeship.com) CI/CD.
 
-production status: [ ![Codeship Status for WengerK/alejandra-chevey](https://app.codeship.com/projects/17efd080-54fc-0135-37a2-66916a474cf7/status?branch=master)](https://app.codeship.com/projects/235460)
-
-staging status: [ ![Codeship Status for WengerK/alejandra-chevey](https://app.codeship.com/projects/17efd080-54fc-0135-37a2-66916a474cf7/status?branch=dev)](https://app.codeship.com/projects/235460)
+| Staging CodeShip-CI | Prod CodeShip-CI |
+|:-------------------:|:----------------:|
+| [ ![Staging CodeShip-CI](https://app.codeship.com/projects/17efd080-54fc-0135-37a2-66916a474cf7/status?branch=dev)](https://app.codeship.com/projects/235460) | [ ![Prod CodeShip-CI](https://app.codeship.com/projects/17efd080-54fc-0135-37a2-66916a474cf7/status?branch=master)](https://app.codeship.com/projects/235460) |
 
 ## 🔧 Prerequisites
 
