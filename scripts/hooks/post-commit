@@ -1,0 +1,1 @@
+html5validator --root public --format text

@@ -15,7 +15,7 @@
 
     <!-- Site Title & default metas -->
     <title>{{ .Title | default .Site.Title }}{{ if not .IsHome }} | {{ .Site.Title }} {{ end }}</title>
-    <meta http-equiv="refresh" content="0;URL='{{ .Site.BaseURL }}'" />
+    <meta http-equiv="refresh" content="0; URL={{ .Site.BaseURL }}" />
   </head>
   <body class=""></body>
 </html>
