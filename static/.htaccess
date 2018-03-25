@@ -7,6 +7,9 @@
 # Prevent directory listings
 Options All -Indexes
 
+# 404 Redirection
+ErrorDocument 404 /404.html
+
 # Redirecting from HTTP to HTTPS
 # RewriteEngine On
 # RewriteCond %{HTTP:X-Forwarded-SSL} !on
