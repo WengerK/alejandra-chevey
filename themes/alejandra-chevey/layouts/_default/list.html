@@ -1,6 +1,21 @@
-{{ define "main" }}
-<main class="main">
-  LIST
-  {{ .Content }}
-</main>
-{{ end }}
+<!DOCTYPE html>
+<!--
+    ___    __    ______   ________  _________    __________  __
+   /   |  / /   / ____/  / ____/ / / / ____/ |  / / ____/\ \/ /
+  / /| | / /   / __/    / /   / /_/ / __/  | | / / __/    \  /
+ / ___ |/ /___/ /___   / /___/ __  / /___  | |/ / /___    / /
+/_/  |_/_____/_____/   \____/_/ /_/_____/  |___/_____/   /_/
+-->
+<html lang="{{ .Lang }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Site Title & default metas -->
+    <title>{{ .Title | default .Site.Title }}{{ if not .IsHome }} | {{ .Site.Title }} {{ end }}</title>
+    <meta http-equiv="refresh" content="0; URL={{ .Site.BaseURL }}" />
+  </head>
+  <body class=""></body>
+</html>
