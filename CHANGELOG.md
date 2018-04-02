@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.0.3 (2018-04-02)
+ - update global texts
+ - remove, replace & move content images
+ - add license file
+ - add 404 page
+
 ## 1.0.2 (2018-03-17)
  - add HTTPS via Let's Encrypt
  - fix mobile hero text
