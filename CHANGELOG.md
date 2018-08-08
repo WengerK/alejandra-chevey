@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## NEXT RELEASE
+ - change some images on projects
+ - change every cover images to use white variations
+
 ## 1.0.3 (2018-04-02)
  - update global texts
  - remove, replace & move content images
