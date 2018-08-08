@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## NEXT RELEASE
+## 1.0.4 (2018-08-08)
  - change some images on projects
  - change every cover images to use white variations
 
