@@ -1,16 +1,21 @@
 # CHANGELOG
 
-## 1.0.4 (2018-08-08)
+## 1.0.4 (2019-01-05)
+ - tweak descriptions of projects
+ - remove old files (resume, thumbnails, ...)
+ - improve deployment with codeship specific scripts
+
+## 1.0.4 (2018-08-08)
  - change some images on projects
  - change every cover images to use white variations
 
-## 1.0.3 (2018-04-02)
+## 1.0.3 (2018-04-02)
  - update global texts
  - remove, replace & move content images
  - add license file
  - add 404 page
 
-## 1.0.2 (2018-03-17)
+## 1.0.2 (2018-03-17)
  - add HTTPS via Let's Encrypt
  - fix mobile hero text
 
@@ -20,6 +25,6 @@
 
 ## 1.0.0 (2018-03-04)
  - release
- 
+
 ## 0.0.0 (2017-07-27)
  - init project
