@@ -1,6 +1,7 @@
 ---
-title: "eye"
+title: "Public Eye"
 date: 2019-01-01T17:17:48+02:00
 draft: false
+slug: eye
 layout: "eye"
 ---
